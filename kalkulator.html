@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Kalkulator</title>
+        <style type="text/css">
+            body{
+                margin: 5%;
+                align-content: center;
+            }
+
+            #calc{
+                position: relative;
+                width: 400px;
+                height: 500px;
+                margin-left: 10px;
+                margin-top: 60px;
+                border-radius: 6px;
+                background-color: rgb(207, 213, 243);
+                box-shadow: 0 0 7px 0 #847c8b
+            }
+
+            .tombol{
+                padding: 15px 25px;
+                margin-left: 21px;
+                margin-right: 10px;
+                margin-bottom: 20px;
+                margin-top: 15px;
+                border-radius: 5px;
+                background-color: #eaf9fd;
+                box-shadow: 0 0 7px 0px #182747;
+            }
+            #hapus{
+                background-color: #d6b9b4;
+                box-shadow: 0 0 7px 0px #182747;
+            }
+            .isian{
+                padding: 20px;
+                margin-top: 40px;
+                margin-left: 7px;
+                margin-right: 10px;
+                margin-bottom: 20px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                text-align: center;
+                font-size: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="calc">
+            <form name="Calculator">
+                <table>
+                    <tr>
+                        <td>
+                            <input class="isian" type="text" name=input>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="tombol" type="button" value="7" onclick="Calculator.input.value += '7'">
+                            <input class="tombol" type="button" value="8" onclick="Calculator.input.value += '8'">
+                            <input class="tombol" type="button" value="9" onclick="Calculator.input.value += '9'">
+                            <input class="tombol" type="button" value="/" onclick="Calculator.input.value += '/'">
+                            <br>
+                            <input class="tombol" type="button" value="4" onclick="Calculator.input.value += '4'">
+                            <input class="tombol" type="button" value="5" onclick="Calculator.input.value += '5'">
+                            <input class="tombol" type="button" value="6" onclick="Calculator.input.value += '6'">
+                            <input class="tombol" type="button" value="x" onclick="Calculator.input.value += '*'">
+                            <br>
+                            <input class="tombol" type="button" value="1" onclick="Calculator.input.value += '1'">
+                            <input class="tombol" type="button" value="2" onclick="Calculator.input.value += '2'">
+                            <input class="tombol" type="button" value="3" onclick="Calculator.input.value += '3'">
+                            <input class="tombol" type="button" value="-" onclick="Calculator.input.value += '-'">
+                            <br>
+                            <input class="tombol" id="hapus" type="button" value="C" onclick="Calculator.input.value = ''">
+                            <input class="tombol" type="button" value="0" onclick="Calculator.input.value += '0'">
+                            <input class="tombol" type="button" value="=" onclick="Calculator.input.value = eval(Calculator.input.value)">
+                            <input class="tombol" type="button" value="+" onclick="Calculator.input.value += '+'">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </body>
+</html>
